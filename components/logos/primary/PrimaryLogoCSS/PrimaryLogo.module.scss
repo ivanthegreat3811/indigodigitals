@@ -1,0 +1,17 @@
+@use '../../../../public/styles/_variables/_variables.scss' as var;
+
+.wrapper {
+    z-index: 500;
+}
+
+.container {
+    position: relative;
+    width: 200px;
+    height: calc(var.$HEIHT_HEADER * 0.45);
+    transform: scale(1);
+    transition: transform 0.4s ease;
+
+    &.isActive {
+        transform: scale(1.5);
+    }
+}

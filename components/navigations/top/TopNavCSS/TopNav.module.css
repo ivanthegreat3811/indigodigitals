@@ -1,0 +1,49 @@
+.wrapper {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  opacity: 1;
+  transition: opacity 0.2s ease 0.2s;
+}
+
+.container {
+  position: relative;
+}
+
+.nav {
+  position: absolute;
+  top: -85vh;
+  z-index: 20;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  word-break: keep-all;
+  transition: top 0.4s ease;
+  width: 100vw;
+  height: 85vh;
+  background-color: #000;
+  padding-top: 13vh;
+  padding-left: 75px;
+}
+
+.listItem {
+  padding-bottom: 20px;
+  display: block;
+  width: 50%;
+}
+.listItem:hover .listLink {
+  color: #ffb800;
+}
+
+.listLink {
+  color: #063d63;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.isActive.wrapper {
+  opacity: 1;
+}
+.isActive .nav {
+  top: 0;
+}/*# sourceMappingURL=TopNav.module.css.map */

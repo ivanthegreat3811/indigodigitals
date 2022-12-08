@@ -1,0 +1,61 @@
+@use '../_variables/variables.scss' as var;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+.LARGETITLE {
+    font-size: var.$FONTSIZE_LARGETITLE;
+    // font-weight: var.$FONTWEIGHT_TITLE;
+    // line-height: var.$LINEHEIGHT_TITLE;
+    // letter-spacing: var.$LETTERSPACING_TITLE;
+
+    // @media screen and (max-width: var.$BREAKPOINT_MD) {
+    //     font-size: var.$FONTSIZE_TITLE_RESPONSIVE;
+    // font-weight: var.$FONTWEIGHT_TITLE_RESPONSIVE;
+    // line-height: var.$LINEHEIGHT_TITLE_RESPONSIVE;
+    // letter-spacing: var.$LETTERSPACING_TITLE_RESPONSIVE;
+    // }
+}
+
+.SMALLTITLE {
+    font-size: var.$FONTSIZE_SMALLTITLE;
+}
+
+.SUBTITLE {
+    font-size: var.$FONTSIZE_SUBTITLE;
+    // font-weight: var.$FONTWEIGHT_SUBTITLE;
+    // line-height: var.$LINEHEIGHT_SUBTITLE;
+    // letter-spacing: var.$LETTERSPACING_SUBTITLE;
+
+    // @media screen and (max-width: var.$BREAKPOINT_MD) {
+    //     font-size: var.$FONTSIZE_SUBTITLE_RESPONSIVE;
+    // font-weight: var.$FONTWEIGHT_SUBTITLE_RESPONSIVE;
+    // line-height: var.$LINEHEIGHT_SUBTITLE_RESPONSIVE;
+    // letter-spacing: var.$LETTERSPACING_SUBTITLE_RESPONSIVE;
+    // }
+}
+
+.CONTENT {
+    font-size: var.$FONTSIZE_CONTENT;
+    // font-weight: var.$FONTWEIGHT_CONTENT;
+    // line-height: var.$LINEHEIGHT_CONTENT;
+    // letter-spacing: var.$LETTERSPACING_CONTENT;
+
+    // @media screen and (max-width: var.$BREAKPOINT_MD) {
+    //     font-size: var.$FONTSIZE_CONTENT_RESPONSIVE;
+    // font-weight: var.$FONTWEIGHT_CONTENT_RESPONSIVE;
+    // line-height: var.$LINEHEIGHT_CONTENT_RESPONSIVE;
+    // letter-spacing: var.$LETTERSPACING_CONTENT_RESPONSIVE;
+    // }
+}
+
+.SMALLWORD {
+    font-size: var.$FONTSIZE_SMALLWORD;
+}

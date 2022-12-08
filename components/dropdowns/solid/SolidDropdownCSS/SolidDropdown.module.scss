@@ -1,0 +1,55 @@
+@use '../../../../public/styles/_variables/variables' as var;
+
+$TRANSITION_TIME: 0.2s;
+$TRANSITION_TIMINGFUNCTION: ease-out;
+
+.title {
+    color: var.$COLOR_SECONDARY;
+    cursor: pointer;
+    &:hover {
+        color: var.$COLOR_SUCCESS;
+    }
+    .arrow {
+        border: solid var.$COLOR_SUCCESS;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        margin-left: 10px;
+        padding: 5px;
+        transform: rotate(-45deg);
+        vertical-align: middle;
+        transform-origin: center;
+        transition: transform 0.2s ease;
+        &.isActive {
+            transform: rotate(45deg);
+        }
+    }
+}
+
+.list {
+    opacity: 0;
+    height: 0;
+    transition: height $TRANSITION_TIME $TRANSITION_TIMINGFUNCTION, opacity $TRANSITION_TIME $TRANSITION_TIMINGFUNCTION;
+
+    &.isActive {
+        opacity: 1;
+        height: 300px;
+        transition: height $TRANSITION_TIME $TRANSITION_TIMINGFUNCTION,
+            opacity $TRANSITION_TIMINGFUNCTION $TRANSITION_TIME 0.1s;
+    }
+
+    .listItem {
+        list-style: none;
+        padding-top: 17px;
+        text-indent: 1rem;
+        width: 100%;
+
+        &:hover .listLink {
+            color: var.$COLOR_SUCCESS;
+        }
+    }
+    .listLink {
+        text-decoration: none;
+        color: var.$COLOR_SECONDARY;
+        transition: color $TRANSITION_TIME $TRANSITION_TIMINGFUNCTION;
+    }
+}

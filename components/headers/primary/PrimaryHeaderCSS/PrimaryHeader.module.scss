@@ -1,0 +1,41 @@
+@use '../../../../public/styles/_variables/_variables.scss' as var;
+
+.wrapper {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 150;
+}
+
+.header {
+    width: 100vw;
+    height: var.$HEIHT_HEADER;
+    background-color: var.$BACKGROUNDCOLOR_HEADER;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.33);
+    transition: background-color 0.8s ease;
+    transition-delay: 0s;
+    &.isActive {
+        background-color: var.$BACKGROUNDCOLOR_MENUOPEN;
+        // transition-delay: 0.4s;
+    }
+}
+
+.burgerBar {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    transition: left 0.4s ease, transform 0.4s ease;
+
+    &.isActive {
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

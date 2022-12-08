@@ -1,0 +1,46 @@
+.title {
+  color: #063d63;
+  cursor: pointer;
+}
+.title:hover {
+  color: #ffb800;
+}
+.title .arrow {
+  border: solid #ffb800;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  margin-left: 10px;
+  padding: 5px;
+  transform: rotate(-45deg);
+  vertical-align: middle;
+  transform-origin: center;
+  transition: transform 0.2s ease;
+}
+.title .arrow.isActive {
+  transform: rotate(45deg);
+}
+
+.list {
+  opacity: 0;
+  height: 0;
+  transition: height 0.2s ease-out, opacity 0.2s ease-out;
+}
+.list.isActive {
+  opacity: 1;
+  height: 300px;
+  transition: height 0.2s ease-out, opacity ease-out 0.2s 0.1s;
+}
+.list .listItem {
+  list-style: none;
+  padding-top: 17px;
+  text-indent: 1rem;
+  width: 100%;
+}
+.list .listItem:hover .listLink {
+  color: #ffb800;
+}
+.list .listLink {
+  text-decoration: none;
+  color: #063d63;
+  transition: color 0.2s ease-out;
+}/*# sourceMappingURL=SolidDropdown.module.css.map */

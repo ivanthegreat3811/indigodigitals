@@ -1,0 +1,63 @@
+@use '../../../../public/styles/_variables/_variables.scss' as var;
+
+$HEIGHT_CONTAINER: 20px;
+$HEIGHT_LINE: 2px;
+$HEIGHT_WRAPPER: $HEIGHT_CONTAINER + $HEIGHT_LINE;
+
+$WIDTH_CONTAINER: 25px;
+
+.wrapper {
+    z-index: 100;
+    display: flex;
+    width: fit-content;
+    cursor: pointer;
+    height: $HEIGHT_WRAPPER;
+}
+
+.container {
+    position: relative;
+    height: $HEIGHT_CONTAINER;
+    width: $WIDTH_CONTAINER;
+    z-index: 100;
+}
+
+.line {
+    position: absolute;
+    margin: auto 0;
+    height: $HEIGHT_LINE;
+    width: 100%;
+    background-color: var.$COLOR_SUCCESS;
+    border-radius: 50px;
+    transform-origin: center center;
+
+    transition: top 0.1s ease-out 0.1s, width 0.1s ease-out, height 0.1s ease-out, transform 0.1s ease-out;
+}
+
+.line1 {
+    top: 0%;
+}
+
+.line2 {
+    top: 50%;
+}
+
+.line3 {
+    top: 100%;
+}
+
+.isActive {
+    transition: top 0.1s ease-out, width 0.1s ease-out 0.1s, height 0.1s ease-out, transform 0.1s ease-out 0.1s;
+    top: 50%;
+
+    &.line1 {
+        transform: rotate(225deg);
+    }
+
+    &.line2 {
+        width: 0% !important;
+    }
+
+    &.line3 {
+        transform: rotate(135deg);
+    }
+}

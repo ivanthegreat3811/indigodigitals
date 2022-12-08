@@ -1,0 +1,14 @@
+.wrapper {
+  z-index: 500;
+}
+
+.container {
+  position: relative;
+  width: 200px;
+  height: 5.85vh;
+  transform: scale(1);
+  transition: transform 0.4s ease;
+}
+.container.isActive {
+  transform: scale(1.5);
+}/*# sourceMappingURL=PrimaryLogo.module.css.map */

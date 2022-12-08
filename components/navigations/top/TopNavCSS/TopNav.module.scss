@@ -1,0 +1,53 @@
+@use '../../../../public/styles/_variables/_variables.scss' as var;
+
+.wrapper {
+    width: fit-content;
+    opacity: 1;
+    transition: opacity 0.2s ease 0.2s;
+}
+
+.container {
+    position: relative;
+}
+
+.nav {
+    position: absolute;
+    top: -(var.$HEIGHT_DROPDOWNMENU);
+    z-index: 20;
+    width: fit-content;
+    word-break: keep-all;
+
+    transition: top 0.4s ease;
+    width: 100vw;
+    height: var.$HEIGHT_DROPDOWNMENU;
+    background-color: var.$BACKGROUNDCOLOR_MENUOPEN;
+    padding-top: var.$HEIHT_HEADER;
+    padding-left: 75px;
+}
+
+.listItem {
+    padding-bottom: 20px;
+    display: block;
+    width: 50%;
+
+    &:hover .listLink {
+        color: var.$COLOR_SUCCESS;
+    }
+}
+
+.listLink {
+    color: var.$COLOR_SECONDARY;
+
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.isActive {
+    &.wrapper {
+        opacity: 1;
+    }
+
+    .nav {
+        top: 0;
+    }
+}

@@ -1,0 +1,5 @@
+/* These 3 lines will pick up the basic Tailwind style for us. */
+/* Do not remove it! */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
