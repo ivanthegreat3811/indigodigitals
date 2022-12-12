@@ -1,0 +1,8 @@
+@use '../../../../public/styles/_variables/_variables.scss' as var;
+.container {
+    color: #aaaaaa;
+
+    @media screen and (max-width: 1200px) {
+        color: var.$COLOR_SECONDARY;
+    }
+}

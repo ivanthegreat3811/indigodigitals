@@ -1,0 +1,70 @@
+@use '../../../../../public/styles/_variables/_variables.scss' as var;
+
+$PADDING_X_INPUT: 5px;
+$PADDING_Y_INPUT: 20px;
+
+$TRANSITION_TIME: 0.1s;
+$TRANSITION_TIMING_FUNCTION: linear;
+
+.wrapper {
+    margin-top: 50px;
+    box-sizing: border-box;
+    * {
+        outline: none;
+    }
+}
+
+.label {
+    position: relative;
+}
+
+.input {
+    //outline: 1px solid rgba(0, 0, 0, 0.6);
+    border: 1.5px solid;
+    border-color: #ffff #ffff rgba(0, 0, 0, 0.4) #ffff;
+    border-radius: 3px;
+    text-indent: 5px;
+    width: 100%;
+
+    padding: $PADDING_Y_INPUT $PADDING_X_INPUT;
+    height: 100%;
+    transition: border-color $TRANSITION_TIME $TRANSITION_TIMING_FUNCTION;
+
+    &.isFocus {
+        border-color: var.$COLOR_PRIMARY;
+    }
+}
+
+.field {
+    position: absolute;
+    padding: 0 $PADDING_X_INPUT;
+    top: 50%;
+    left: 5px;
+    height: fit-content;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.4);
+    transform: scale(1) translateY(-50%);
+    transform-origin: bottom left;
+
+    transition: top $TRANSITION_TIME $TRANSITION_TIMING_FUNCTION, transform $TRANSITION_TIME $TRANSITION_TIMING_FUNCTION,
+        color $TRANSITION_TIME $TRANSITION_TIMING_FUNCTION, left $TRANSITION_TIME $TRANSITION_TIMING_FUNCTION;
+
+    &.isFocus,
+    &.isBlurAndFullfilled {
+        top: -($PADDING_Y_INPUT * 1.75);
+        left: 5px;
+        background-color: white;
+        color: var.$COLOR_PRIMARY;
+        transform: scale(0.8);
+    }
+
+    &.isBlurAndFullfilled {
+        color: rgba(0, 0, 0, 0.4);
+    }
+
+    .isRequired {
+        color: red;
+        vertical-align: middle;
+        padding: 0 6px;
+    }
+}

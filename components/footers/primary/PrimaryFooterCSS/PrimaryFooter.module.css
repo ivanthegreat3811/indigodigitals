@@ -1,1 +1,8 @@
-/*# sourceMappingURL=PrimaryFooter.module.css.map */
+.container {
+  color: #aaaaaa;
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    color: #063d63;
+  }
+}/*# sourceMappingURL=PrimaryFooter.module.css.map */

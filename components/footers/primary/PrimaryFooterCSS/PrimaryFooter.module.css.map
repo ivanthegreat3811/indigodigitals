@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"PrimaryFooter.module.css"}
+{"version":3,"sources":["PrimaryFooter.module.scss","PrimaryFooter.module.css","../../../../public/styles/_variables/_variables.scss"],"names":[],"mappings":"AACA;EACI,cAAA;ACAJ;ADEI;EAHJ;IAIQ,cEoCU;EDnChB;AACF","file":"PrimaryFooter.module.css"}

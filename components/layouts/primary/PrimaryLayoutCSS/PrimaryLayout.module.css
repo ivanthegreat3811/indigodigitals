@@ -1,1 +1,46 @@
-/*# sourceMappingURL=PrimaryLayout.module.css.map */
+.form {
+  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.4);
+  max-width: 1000px;
+  background-color: white;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 270px;
+  background-color: #f5f5f5;
+  resize: none;
+}
+
+#contact {
+  position: relative;
+}
+#contact #contactBgWrapper {
+  z-index: -20;
+  position: absolute;
+  transform: translateY(-50%);
+  height: 700px;
+}
+@media screen and (min-width: 1200px) {
+  #contact #contactBgWrapper {
+    display: none;
+  }
+}
+#contact #contactBgWrapper #contactBgContainer {
+  position: relative;
+}
+#contact #contactBgWrapper #contactBgContainer #contactBgLayer1 {
+  position: absolute;
+  width: 100vw;
+  height: 700px;
+  background: #ffb800;
+  -webkit-clip-path: polygon(0 10%, 35% 0, 100% 10%, 100% 100%, 0 100%);
+          clip-path: polygon(0 10%, 35% 0, 100% 10%, 100% 100%, 0 100%);
+}
+#contact #contactBgWrapper #contactBgContainer #contactBgLayer2 {
+  position: absolute;
+  width: 100vw;
+  height: 700px;
+  background: linear-gradient(#46d1dc 0%, #2c78ad 42.97%, #063d63 100%);
+  -webkit-clip-path: polygon(0 10%, 35% 0, 100% 15%, 100% 100%, 0 100%);
+          clip-path: polygon(0 10%, 35% 0, 100% 15%, 100% 100%, 0 100%);
+}/*# sourceMappingURL=PrimaryLayout.module.css.map */

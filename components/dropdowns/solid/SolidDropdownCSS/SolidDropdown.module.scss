@@ -3,6 +3,8 @@
 $TRANSITION_TIME: 0.2s;
 $TRANSITION_TIMINGFUNCTION: ease-out;
 
+$HEIGHT_DROPDOWN: 210px;
+
 .title {
     color: var.$COLOR_SECONDARY;
     cursor: pointer;
@@ -11,10 +13,10 @@ $TRANSITION_TIMINGFUNCTION: ease-out;
     }
     .arrow {
         border: solid var.$COLOR_SUCCESS;
-        border-width: 0 3px 3px 0;
+        border-width: 0 1.5px 1.5px 0;
         display: inline-block;
         margin-left: 10px;
-        padding: 5px;
+        padding: 3px;
         transform: rotate(-45deg);
         vertical-align: middle;
         transform-origin: center;
@@ -32,7 +34,7 @@ $TRANSITION_TIMINGFUNCTION: ease-out;
 
     &.isActive {
         opacity: 1;
-        height: 300px;
+        height: $HEIGHT_DROPDOWN;
         transition: height $TRANSITION_TIME $TRANSITION_TIMINGFUNCTION,
             opacity $TRANSITION_TIMINGFUNCTION $TRANSITION_TIME 0.1s;
     }

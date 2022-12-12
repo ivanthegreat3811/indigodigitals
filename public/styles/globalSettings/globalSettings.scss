@@ -16,16 +16,19 @@ html {
     // line-height: var.$LINEHEIGHT_TITLE;
     // letter-spacing: var.$LETTERSPACING_TITLE;
 
-    // @media screen and (max-width: var.$BREAKPOINT_MD) {
-    //     font-size: var.$FONTSIZE_TITLE_RESPONSIVE;
-    // font-weight: var.$FONTWEIGHT_TITLE_RESPONSIVE;
-    // line-height: var.$LINEHEIGHT_TITLE_RESPONSIVE;
-    // letter-spacing: var.$LETTERSPACING_TITLE_RESPONSIVE;
-    // }
+    @media screen and (max-width: var.$BREAKPOINT_MD) {
+        font-size: var.$FONTSIZE_LARGETITLE_RESPONSIVE;
+        //  font-weight: var.$FONTWEIGHT_TITLE_RESPONSIVE;
+        //  line-height: var.$LINEHEIGHT_TITLE_RESPONSIVE;
+        //  letter-spacing: var.$LETTERSPACING_TITLE_RESPONSIVE;
+    }
 }
 
 .SMALLTITLE {
     font-size: var.$FONTSIZE_SMALLTITLE;
+    @media screen and (max-width: var.$BREAKPOINT_MD) {
+        font-size: var.$FONTSIZE_SMALLTITLE_RESPONSIVE;
+    }
 }
 
 .SUBTITLE {
@@ -34,12 +37,12 @@ html {
     // line-height: var.$LINEHEIGHT_SUBTITLE;
     // letter-spacing: var.$LETTERSPACING_SUBTITLE;
 
-    // @media screen and (max-width: var.$BREAKPOINT_MD) {
-    //     font-size: var.$FONTSIZE_SUBTITLE_RESPONSIVE;
-    // font-weight: var.$FONTWEIGHT_SUBTITLE_RESPONSIVE;
-    // line-height: var.$LINEHEIGHT_SUBTITLE_RESPONSIVE;
-    // letter-spacing: var.$LETTERSPACING_SUBTITLE_RESPONSIVE;
-    // }
+    @media screen and (max-width: var.$BREAKPOINT_MD) {
+        font-size: var.$FONTSIZE_SUBTITLE_RESPONSIVE;
+        // font-weight: var.$FONTWEIGHT_SUBTITLE_RESPONSIVE;
+        // line-height: var.$LINEHEIGHT_SUBTITLE_RESPONSIVE;
+        // letter-spacing: var.$LETTERSPACING_SUBTITLE_RESPONSIVE;
+    }
 }
 
 .CONTENT {
@@ -48,14 +51,17 @@ html {
     // line-height: var.$LINEHEIGHT_CONTENT;
     // letter-spacing: var.$LETTERSPACING_CONTENT;
 
-    // @media screen and (max-width: var.$BREAKPOINT_MD) {
-    //     font-size: var.$FONTSIZE_CONTENT_RESPONSIVE;
-    // font-weight: var.$FONTWEIGHT_CONTENT_RESPONSIVE;
-    // line-height: var.$LINEHEIGHT_CONTENT_RESPONSIVE;
-    // letter-spacing: var.$LETTERSPACING_CONTENT_RESPONSIVE;
-    // }
+    @media screen and (max-width: var.$BREAKPOINT_MD) {
+        font-size: var.$FONTSIZE_CONTENT_RESPONSIVE;
+        // font-weight: var.$FONTWEIGHT_CONTENT_RESPONSIVE;
+        // line-height: var.$LINEHEIGHT_CONTENT_RESPONSIVE;
+        // letter-spacing: var.$LETTERSPACING_CONTENT_RESPONSIVE;
+    }
 }
 
 .SMALLWORD {
     font-size: var.$FONTSIZE_SMALLWORD;
+    @media screen and (max-width: var.$BREAKPOINT_MD) {
+        font-size: var.$FONTSIZE_SMALLWORD_RESPONSIVE;
+    }
 }

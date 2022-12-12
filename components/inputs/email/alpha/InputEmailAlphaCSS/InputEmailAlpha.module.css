@@ -1,0 +1,55 @@
+.wrapper {
+  margin-top: 50px;
+  box-sizing: border-box;
+}
+.wrapper * {
+  outline: none;
+}
+
+.label {
+  position: relative;
+}
+
+.input {
+  border: 1.5px solid;
+  border-color: white white rgba(0, 0, 0, 0.4) white;
+  border-radius: 3px;
+  text-indent: 5px;
+  width: 100%;
+  padding: 20px 5px;
+  height: 100%;
+  transition: border-color 0.1s linear;
+}
+.input.isFocus {
+  border-color: #2e7bb0;
+}
+
+.field {
+  position: absolute;
+  padding: 0 5px;
+  top: 50%;
+  left: 5px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.4);
+  transform: scale(1) translateY(-50%);
+  transform-origin: bottom left;
+  transition: top 0.1s linear, transform 0.1s linear, color 0.1s linear, left 0.1s linear;
+}
+.field.isFocus, .field.isBlurAndFullfilled {
+  top: -35px;
+  left: 5px;
+  background-color: white;
+  color: #2e7bb0;
+  transform: scale(0.8);
+}
+.field.isBlurAndFullfilled {
+  color: rgba(0, 0, 0, 0.4);
+}
+.field .isRequired {
+  color: red;
+  vertical-align: middle;
+  padding: 0 6px;
+}/*# sourceMappingURL=InputEmailAlpha.module.css.map */

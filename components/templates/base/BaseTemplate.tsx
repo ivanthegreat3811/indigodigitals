@@ -8,7 +8,11 @@ export interface IBaseTemplate {
 }
 
 const BaseTemplate: React.FC<IBaseTemplate> = ({ style, className }) => {
-  return <div style={style ? style : {}} className={`${defaultStyleSheet.wrapper} ${className ? className : ''}`}></div>;
+  return (
+    <div style={style ? style : {}} className={`${defaultStyleSheet.wrapper} ${className ? className : ''}`}>
+      <div className={defaultStyleSheet.container}></div>
+    </div>
+  );
 };
 
 export default BaseTemplate;

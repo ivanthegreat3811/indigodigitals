@@ -1,0 +1,51 @@
+@use '../../../../public/styles/_variables/_variables.scss' as var;
+
+.form {
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.4);
+    max-width: 1000px;
+    background-color: white;
+}
+
+.textarea {
+    width: 100%;
+    min-height: 270px;
+    background-color: #f5f5f5;
+    resize: none;
+}
+
+#contact {
+    position: relative;
+    #contactBgWrapper {
+        @media screen and(min-width: 1200px) {
+            display: none;
+        }
+
+        $HEIGHT_CONTACTWRAPPER: 700px;
+        $BOTTOM_CONTACTWRAPPER: -50%;
+        z-index: -20;
+
+        position: absolute;
+        transform: translateY($BOTTOM_CONTACTWRAPPER);
+        height: $HEIGHT_CONTACTWRAPPER;
+
+        #contactBgContainer {
+            position: relative;
+            #contactBgLayer1 {
+                position: absolute;
+                width: 100vw;
+                height: $HEIGHT_CONTACTWRAPPER;
+                background: var.$COLOR_SUCCESS;
+
+                clip-path: polygon(0 10%, 35% 0, 100% 10%, 100% 100%, 0 100%);
+            }
+            #contactBgLayer2 {
+                position: absolute;
+                width: 100vw;
+                height: $HEIGHT_CONTACTWRAPPER;
+                background: linear-gradient(#46d1dc 0%, #2c78ad 42.97%, #063d63 100%);
+
+                clip-path: polygon(0 10%, 35% 0, 100% 15%, 100% 100%, 0 100%);
+            }
+        }
+    }
+}

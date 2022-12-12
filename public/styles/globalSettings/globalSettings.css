@@ -11,19 +11,44 @@ html {
 .LARGETITLE {
   font-size: 2rem;
 }
+@media screen and (max-width: 1200px) {
+  .LARGETITLE {
+    font-size: 1.6rem;
+  }
+}
 
 .SMALLTITLE {
   font-size: 1.8rem;
+}
+@media screen and (max-width: 1200px) {
+  .SMALLTITLE {
+    font-size: 1rem;
+  }
 }
 
 .SUBTITLE {
   font-size: 1.6rem;
 }
+@media screen and (max-width: 1200px) {
+  .SUBTITLE {
+    font-size: 1rem;
+  }
+}
 
 .CONTENT {
   font-size: 1rem;
 }
+@media screen and (max-width: 1200px) {
+  .CONTENT {
+    font-size: 0.8rem;
+  }
+}
 
 .SMALLWORD {
   font-size: 0.8rem;
+}
+@media screen and (max-width: 1200px) {
+  .SMALLWORD {
+    font-size: 0.6rem;
+  }
 }/*# sourceMappingURL=globalSettings.css.map */

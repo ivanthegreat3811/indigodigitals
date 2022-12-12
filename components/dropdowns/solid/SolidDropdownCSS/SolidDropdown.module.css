@@ -7,10 +7,10 @@
 }
 .title .arrow {
   border: solid #ffb800;
-  border-width: 0 3px 3px 0;
+  border-width: 0 1.5px 1.5px 0;
   display: inline-block;
   margin-left: 10px;
-  padding: 5px;
+  padding: 3px;
   transform: rotate(-45deg);
   vertical-align: middle;
   transform-origin: center;
@@ -27,7 +27,7 @@
 }
 .list.isActive {
   opacity: 1;
-  height: 300px;
+  height: 210px;
   transition: height 0.2s ease-out, opacity ease-out 0.2s 0.1s;
 }
 .list .listItem {

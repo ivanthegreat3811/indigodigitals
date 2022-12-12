@@ -1,0 +1,39 @@
+@use '../../../../public/styles/_variables/_variables.scss' as var;
+.wrapper {
+    @media screen and (max-width: 600px) {
+        display: none;
+    }
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 92%;
+    display: flex;
+    width: 3px;
+    .listContainer {
+        position: relative;
+
+        .list {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            height: 60%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            .listItem {
+                width: fit-content;
+                word-break: keep-all;
+            }
+        }
+    }
+
+    .scrollbarContainer {
+        position: relative;
+        width: 3px;
+        height: 100vh;
+        background-color: var.$COLOR_SUCCESS;
+        left: 80px;
+    }
+}

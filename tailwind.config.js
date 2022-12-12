@@ -15,9 +15,21 @@ module.exports = {
     },
     colors: {
       transparent: 'transparent',
+      'blue': '#1fb6ff',
+      'purple': '#7e5bef',
+      'pink': '#ff49db',
+      'orange': '#ff7849',
+      'green': '#13ce66',
+      'yellow': '#ffc82c',
+      'gray-dark': '#273444',
+      'gray': '#8492a6',
+      'gray-light': '#d3dce6',
+      // customize color 
       'primary': '#2e7bb0',
       'secondary': '#063d63',
       'success': '#ffb800',
+      'primary_transparent': '#2e7db2cc',
+
 
     }
   },
