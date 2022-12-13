@@ -143,10 +143,10 @@
     }
 }
 
-#service {
+.service {
     position: relative;
 
-    #bg2Wrapper {
+    .bg2Wrapper {
         $HEIGHT_WRAPPER2: 600px;
         $BOTTOM_WRAPPER2: -50%;
         z-index: -20;
@@ -155,9 +155,9 @@
         transform: translateY($BOTTOM_WRAPPER2);
         height: $HEIGHT_WRAPPER2;
 
-        #bg2Container {
+        .bg2Container {
             position: relative;
-            #bg2Layer1 {
+            .bg2Layer1 {
                 position: absolute;
                 width: 100vw;
                 height: $HEIGHT_WRAPPER2;
@@ -165,7 +165,7 @@
 
                 clip-path: polygon(0 30%, 20% 0, 90% 25%, 100% 25%, 100% 100%, 0 100%);
             }
-            #bg2Layer2 {
+            .bg2Layer2 {
                 position: absolute;
                 width: 100vw;
                 height: $HEIGHT_WRAPPER2;

@@ -1,12 +1,22 @@
 @use '../../../../public/styles/_variables/_variables.scss' as var;
 .wrapper {
+    @media screen and (min-width: 1536px) {
+        left: 90%;
+    }
+    @media screen and (max-width: 1200px) {
+        left: 85%;
+    }
+    @media screen and (max-width: 900px) {
+        left: 85%;
+    }
     @media screen and (max-width: 600px) {
         display: none;
     }
     position: fixed;
     z-index: 20;
     top: 0;
-    left: 92%;
+    left: 90%;
+
     display: flex;
     width: 3px;
     .listContainer {

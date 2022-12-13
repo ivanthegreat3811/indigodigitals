@@ -1,0 +1,172 @@
+.carouselWrapper {
+  width: 100vw;
+  height: 100vh;
+}
+.carouselWrapper .bg1Wrapper {
+  position: absolute;
+  bottom: 12%;
+  transform: translateY(20%);
+  height: 200px;
+}
+@media screen and (max-width: 900px) {
+  .carouselWrapper .bg1Wrapper {
+    display: none;
+  }
+}
+.carouselWrapper .bg1Wrapper .bg1Container {
+  position: relative;
+}
+.carouselWrapper .bg1Wrapper .bg1Container .bg1Layer1 {
+  position: absolute;
+  width: 100vw;
+  height: 200px;
+  -webkit-clip-path: polygon(0 30%, 20% 75%, 90% 0, 100% 80%, 100% 100%, 0 100%);
+          clip-path: polygon(0 30%, 20% 75%, 90% 0, 100% 80%, 100% 100%, 0 100%);
+  background: #ffb800;
+}
+.carouselWrapper .bg1Wrapper .bg1Container .bg1Layer2 {
+  position: absolute;
+  width: 100vw;
+  height: 200px;
+  -webkit-clip-path: polygon(0 50%, 20% 75%, 90% 0, 100% 80%, 100% 100%, 0 100%);
+          clip-path: polygon(0 50%, 20% 75%, 90% 0, 100% 80%, 100% 100%, 0 100%);
+  background: linear-gradient(#46d1dc 0%, #2c78ad 42.97%, #063d63 100%);
+}
+
+.market {
+  margin-top: 150px;
+  position: relative;
+  color: white;
+  height: 60vh;
+  z-index: -200;
+}
+@media screen and (max-width: 900px) {
+  .market {
+    margin-top: 50px;
+  }
+}
+.market .bg2Wrapper {
+  position: absolute;
+  height: 100vw;
+  transform: translateY(-10%);
+  top: 0%;
+}
+@media screen and (max-width: 900px) {
+  .market .bg2Wrapper {
+    transform: translateY(-13%);
+  }
+}
+@media screen and (max-width: 600px) {
+  .market .bg2Wrapper {
+    transform: translateY(-20%);
+  }
+}
+.market .bg2Wrapper .bg2Container {
+  position: relative;
+}
+.market .bg2Wrapper .bg2Container .bg2Layer1 {
+  position: absolute;
+  width: 100vw;
+  height: 100vw;
+  background: #ffb800;
+}
+@media screen and (min-width: 901px) {
+  .market .bg2Wrapper .bg2Container .bg2Layer1 {
+    -webkit-clip-path: polygon(21% 0, 85% 10%, 94% 5%, 100% 8%, 100% 34%, 30% 15%, 0 35%, 0 9%);
+            clip-path: polygon(21% 0, 85% 10%, 94% 5%, 100% 8%, 100% 34%, 30% 15%, 0 35%, 0 9%);
+    min-height: 1800px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .market .bg2Wrapper .bg2Container .bg2Layer1 {
+    -webkit-clip-path: polygon(24% 17%, 100% 29%, 100% 9%, 93% 12%, 12% 0, 0 7%, 0 38%);
+            clip-path: polygon(24% 17%, 100% 29%, 100% 9%, 93% 12%, 12% 0, 0 7%, 0 38%);
+    min-height: 1350px;
+  }
+}
+.market .bg2Wrapper .bg2Container .bg2Layer2 {
+  position: absolute;
+  width: 100vw;
+  height: 100vw;
+  background: linear-gradient(#46d1dc 0%, #2c78ad 42.97%, #063d63 100%);
+}
+@media screen and (min-width: 901px) {
+  .market .bg2Wrapper .bg2Container .bg2Layer2 {
+    -webkit-clip-path: polygon(21% 0, 85% 10%, 94% 5%, 100% 8%, 100% 34%, 30% 15%, 0 35%, 0 12%);
+            clip-path: polygon(21% 0, 85% 10%, 94% 5%, 100% 8%, 100% 34%, 30% 15%, 0 35%, 0 12%);
+    min-height: 1800px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .market .bg2Wrapper .bg2Container .bg2Layer2 {
+    -webkit-clip-path: polygon(24% 17%, 100% 29%, 100% 9%, 93% 12%, 12% 0, 0 10%, 0 38%);
+            clip-path: polygon(24% 17%, 100% 29%, 100% 9%, 93% 12%, 12% 0, 0 10%, 0 38%);
+    min-height: 1350px;
+  }
+}
+.market .bg2Wrapper .bg2Container .bg2Layer3 {
+  position: absolute;
+  width: 100vw;
+  height: 100vw;
+  background: lightblue;
+}
+@media screen and (min-width: 901px) {
+  .market .bg2Wrapper .bg2Container .bg2Layer3 {
+    -webkit-clip-path: polygon(0 70%, 15% 72%, 85% 62%, 100% 68%, 100% 66%, 100% 34%, 30% 15%, 0 35%);
+            clip-path: polygon(0 70%, 15% 72%, 85% 62%, 100% 68%, 100% 66%, 100% 34%, 30% 15%, 0 35%);
+    min-height: 1800px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .market .bg2Wrapper .bg2Container .bg2Layer3 {
+    -webkit-clip-path: polygon(24% 17%, 100% 29%, 100% 94%, 85% 90%, 18% 100%, 0 97%, 0 38%);
+            clip-path: polygon(24% 17%, 100% 29%, 100% 94%, 85% 90%, 18% 100%, 0 97%, 0 38%);
+    min-height: 1350px;
+  }
+}
+.market .marketContent {
+  position: absolute;
+  width: 40vw;
+  bottom: 0px;
+}
+@media screen and (max-width: 900px) {
+  .market .marketContent {
+    width: 80vw;
+    bottom: 200px;
+  }
+}
+
+.tech {
+  min-height: 600px;
+  height: 50vh;
+  position: relative;
+}
+.tech .techContent {
+  position: absolute;
+  width: 40vw;
+  right: 15%;
+  bottom: 25%;
+}
+@media screen and (max-width: 1536px) {
+  .tech .techContent {
+    right: 18%;
+    width: 50vw;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .tech .techContent {
+    right: 25%;
+    width: 50vw;
+  }
+}
+@media screen and (max-width: 900px) {
+  .tech .techContent {
+    width: 60vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .tech .techContent {
+    width: 80vw;
+    right: 0%;
+  }
+}/*# sourceMappingURL=event.module.css.map */

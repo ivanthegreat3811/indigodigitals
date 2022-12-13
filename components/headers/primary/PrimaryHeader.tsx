@@ -15,7 +15,7 @@ const PrimaryHeader: React.FC<IPrimaryHeader> = ({ style, className }) => {
   return (
     <div style={style ? style : {}} className={`${defaultStyleSheet.wrapper} ${isMenuOpen && defaultStyleSheet.isActive} ${className ? className : ''}`}>
       <div className={defaultStyleSheet.container}>
-        <TopNav isActive={isMenuOpen} />
+        <TopNav isActive={isMenuOpen} handleLinkClick={() => setIsMenuOpen(false)} />
         <header className={`${defaultStyleSheet.header} ${isMenuOpen && defaultStyleSheet.isActive}`}>
           <BurgerBar className={defaultStyleSheet.burgerBar} isActive={isMenuOpen} handleClick={() => setIsMenuOpen(prev => !prev)} />
           <PrimaryLogo className={`${defaultStyleSheet.logo} ${isMenuOpen && defaultStyleSheet.isActive}`} isActive={isMenuOpen} />

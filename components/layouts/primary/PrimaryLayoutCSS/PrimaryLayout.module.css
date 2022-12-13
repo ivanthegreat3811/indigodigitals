@@ -11,24 +11,22 @@
   resize: none;
 }
 
-#contact {
+.contact {
   position: relative;
 }
-#contact #contactBgWrapper {
+.contact .contactBgWrapper {
+  transform: translateY(-20%);
   z-index: -20;
   position: absolute;
-  transform: translateY(-50%);
   height: 700px;
 }
-@media screen and (min-width: 1200px) {
-  #contact #contactBgWrapper {
-    display: none;
-  }
+.contact .contactBgWrapper.home {
+  transform: translateY(-50%);
 }
-#contact #contactBgWrapper #contactBgContainer {
+.contact .contactBgWrapper.notHome .contactBgContainer {
   position: relative;
 }
-#contact #contactBgWrapper #contactBgContainer #contactBgLayer1 {
+.contact .contactBgWrapper.notHome .contactBgContainer .contactBgLayer1 {
   position: absolute;
   width: 100vw;
   height: 700px;
@@ -36,7 +34,7 @@
   -webkit-clip-path: polygon(0 10%, 35% 0, 100% 10%, 100% 100%, 0 100%);
           clip-path: polygon(0 10%, 35% 0, 100% 10%, 100% 100%, 0 100%);
 }
-#contact #contactBgWrapper #contactBgContainer #contactBgLayer2 {
+.contact .contactBgWrapper.notHome .contactBgContainer .contactBgLayer2 {
   position: absolute;
   width: 100vw;
   height: 700px;

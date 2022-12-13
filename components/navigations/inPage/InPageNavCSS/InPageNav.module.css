@@ -2,9 +2,24 @@
   position: fixed;
   z-index: 20;
   top: 0;
-  left: 92%;
+  left: 90%;
   display: flex;
   width: 3px;
+}
+@media screen and (min-width: 1536px) {
+  .wrapper {
+    left: 90%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    left: 85%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .wrapper {
+    left: 85%;
+  }
 }
 @media screen and (max-width: 600px) {
   .wrapper {

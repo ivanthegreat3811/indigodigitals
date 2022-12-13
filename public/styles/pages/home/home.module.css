@@ -132,19 +132,19 @@
   background: linear-gradient(#46d1dc 0%, #2c78ad 42.97%, #063d63 100%);
 }
 
-#service {
+.service {
   position: relative;
 }
-#service #bg2Wrapper {
+.service .bg2Wrapper {
   z-index: -20;
   position: absolute;
   transform: translateY(-50%);
   height: 600px;
 }
-#service #bg2Wrapper #bg2Container {
+.service .bg2Wrapper .bg2Container {
   position: relative;
 }
-#service #bg2Wrapper #bg2Container #bg2Layer1 {
+.service .bg2Wrapper .bg2Container .bg2Layer1 {
   position: absolute;
   width: 100vw;
   height: 600px;
@@ -152,7 +152,7 @@
   -webkit-clip-path: polygon(0 30%, 20% 0, 90% 25%, 100% 25%, 100% 100%, 0 100%);
           clip-path: polygon(0 30%, 20% 0, 90% 25%, 100% 25%, 100% 100%, 0 100%);
 }
-#service #bg2Wrapper #bg2Container #bg2Layer2 {
+.service .bg2Wrapper .bg2Container .bg2Layer2 {
   position: absolute;
   width: 100vw;
   height: 600px;

@@ -13,38 +13,40 @@
     resize: none;
 }
 
-#contact {
+.contact {
     position: relative;
-    #contactBgWrapper {
-        @media screen and(min-width: 1200px) {
-            display: none;
-        }
-
+    .contactBgWrapper {
         $HEIGHT_CONTACTWRAPPER: 700px;
-        $BOTTOM_CONTACTWRAPPER: -50%;
-        z-index: -20;
 
+        transform: translateY(-20%);
+        z-index: -20;
         position: absolute;
-        transform: translateY($BOTTOM_CONTACTWRAPPER);
         height: $HEIGHT_CONTACTWRAPPER;
 
-        #contactBgContainer {
-            position: relative;
-            #contactBgLayer1 {
-                position: absolute;
-                width: 100vw;
-                height: $HEIGHT_CONTACTWRAPPER;
-                background: var.$COLOR_SUCCESS;
+        &.home {
+            $BOTTOM_CONTACTWRAPPER: -50%;
+            transform: translateY($BOTTOM_CONTACTWRAPPER);
+        }
 
-                clip-path: polygon(0 10%, 35% 0, 100% 10%, 100% 100%, 0 100%);
-            }
-            #contactBgLayer2 {
-                position: absolute;
-                width: 100vw;
-                height: $HEIGHT_CONTACTWRAPPER;
-                background: linear-gradient(#46d1dc 0%, #2c78ad 42.97%, #063d63 100%);
+        &.notHome {
+            .contactBgContainer {
+                position: relative;
+                .contactBgLayer1 {
+                    position: absolute;
+                    width: 100vw;
+                    height: $HEIGHT_CONTACTWRAPPER;
+                    background: var.$COLOR_SUCCESS;
 
-                clip-path: polygon(0 10%, 35% 0, 100% 15%, 100% 100%, 0 100%);
+                    clip-path: polygon(0 10%, 35% 0, 100% 10%, 100% 100%, 0 100%);
+                }
+                .contactBgLayer2 {
+                    position: absolute;
+                    width: 100vw;
+                    height: $HEIGHT_CONTACTWRAPPER;
+                    background: linear-gradient(#46d1dc 0%, #2c78ad 42.97%, #063d63 100%);
+
+                    clip-path: polygon(0 10%, 35% 0, 100% 15%, 100% 100%, 0 100%);
+                }
             }
         }
     }

@@ -20,14 +20,7 @@ const Home: NextPageWithLayout = () => {
 
   return (
     <>
-      <div id={styleSheet.keyVision} style={{ width: '100vw', height: '100vh', backgroundColor: 'whitesmoke' }}>
-        <div id={styleSheet.bg1Wrapper}>
-          <div id={styleSheet.bg1Container}>
-            <div id={styleSheet.bg1Layer1}></div>
-            <div id={styleSheet.bg1Layer2}></div>
-          </div>
-        </div>
-      </div>
+      <div id={styleSheet.keyVision} style={{ width: '100vw', height: '100vh', backgroundColor: 'whitesmoke' }}></div>
       <main>
         <section id="about" className={styleSheet.section1}>
           <h2 className="text-center LARGETITLE text-secondary my-16">關於靛青</h2>
@@ -37,7 +30,7 @@ const Home: NextPageWithLayout = () => {
             </div>
             <div className={`${styleSheet.section1_paragraphContainer} `}>
               <p className={`${styleSheet.section1_paragraph}  CONTENT`} data-aos="slide-right" data-aos-delay="50">
-                <br /> 走老路，到不了新地方，一直墨守成規不會一鳴驚人！
+                走老路，到不了新地方，一直墨守成規不會一鳴驚人！
                 <br /> 現今網路世代來臨，人們不再只是到實體店面消費、根據體驗給出評價，而 是更喜愛在網路上搜尋相關消息來作為判斷依據。
                 <br /> 因此網路形象變得無比重要。
                 <br /> 如何用一個網頁打造出專屬的品牌形象？
@@ -49,11 +42,11 @@ const Home: NextPageWithLayout = () => {
           </div>
         </section>
 
-        <section id={styleSheet.service} className="">
-          <div id={styleSheet.bg2Wrapper}>
-            <div id={styleSheet.bg2Container}>
-              <div id={styleSheet.bg2Layer1}></div>
-              <div id={styleSheet.bg2Layer2}></div>
+        <section id="service" className={styleSheet.service}>
+          <div className={styleSheet.bg2Wrapper}>
+            <div className={styleSheet.bg2Container}>
+              <div className={styleSheet.bg2Layer1}></div>
+              <div className={styleSheet.bg2Layer2}></div>
             </div>
           </div>
           <h2 className="LARGETITLE text-center  text-success py-7 lg:py-11">服務項目</h2>
@@ -89,25 +82,27 @@ const Home: NextPageWithLayout = () => {
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               <div data-aos="fade-up" data-aos-delay="100">
                 <h3 className="text-center SUBTITLE mt-16 mb-4 text-secondary">活動網站</h3>
-                <div className={`${styleSheet.section3_card}`}>
-                  <div className={`${styleSheet.section3_imageBox}`}>
-                    <img src="/images/vertical/活動網站.jpg" alt="" style={{ objectFit: 'cover', objectPosition: 'center' }} />
-                  </div>
-                  <div className={styleSheet.maskWrapper}>
-                    <div className={styleSheet.maskContainer}>
-                      <article className={styleSheet.maskContent}>
-                        <h3 className={`${styleSheet.maskTitle} SUBTITLE`}>活動網站</h3>
-                        <p className={`${styleSheet.maskText} CONTENT`}>
-                          最了解你的設計團隊，
-                          <br /> 做出高互動性的網站。
-                          <br /> 用科技結合設計，
-                          <br /> 讓你與眾不同。
-                        </p>
-                      </article>
-                      <span role="button" className={`${styleSheet.arrowRight}  ${styleSheet.maskArrow}`}></span>
+                <Link href="/event">
+                  <div className={`${styleSheet.section3_card}`}>
+                    <div className={`${styleSheet.section3_imageBox}`}>
+                      <img src="/images/vertical/活動網站.jpg" alt="" style={{ objectFit: 'cover', objectPosition: 'center' }} />
+                    </div>
+                    <div className={styleSheet.maskWrapper}>
+                      <div className={styleSheet.maskContainer}>
+                        <article className={styleSheet.maskContent}>
+                          <h3 className={`${styleSheet.maskTitle} SUBTITLE`}>活動網站</h3>
+                          <p className={`${styleSheet.maskText} CONTENT`}>
+                            最了解你的設計團隊，
+                            <br /> 做出高互動性的網站。
+                            <br /> 用科技結合設計，
+                            <br /> 讓你與眾不同。
+                          </p>
+                        </article>
+                        <span role="button" className={`${styleSheet.arrowRight}  ${styleSheet.maskArrow}`}></span>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </div>
 
               <div data-aos="fade-up" data-aos-delay="200">
@@ -188,6 +183,4 @@ const Home: NextPageWithLayout = () => {
 
 export default Home;
 
-Home.getLayout = page => {
-  return <PrimaryLayout>{page}</PrimaryLayout>;
-};
+Home.getLayout = page => <PrimaryLayout home={true}>{page}</PrimaryLayout>;

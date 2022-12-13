@@ -22,11 +22,13 @@
 
 .list {
   opacity: 0;
+  visibility: hidden;
   height: 0;
-  transition: height 0.2s ease-out, opacity 0.2s ease-out;
+  transition: height 0.2s ease-out, opacity 0.2s ease-out, visibility 0.2s linear;
 }
 .list.isActive {
   opacity: 1;
+  visibility: visible;
   height: 210px;
   transition: height 0.2s ease-out, opacity ease-out 0.2s 0.1s;
 }

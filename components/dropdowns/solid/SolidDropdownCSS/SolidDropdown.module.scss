@@ -29,11 +29,14 @@ $HEIGHT_DROPDOWN: 210px;
 
 .list {
     opacity: 0;
+    visibility: hidden;
     height: 0;
-    transition: height $TRANSITION_TIME $TRANSITION_TIMINGFUNCTION, opacity $TRANSITION_TIME $TRANSITION_TIMINGFUNCTION;
+    transition: height $TRANSITION_TIME $TRANSITION_TIMINGFUNCTION, opacity $TRANSITION_TIME $TRANSITION_TIMINGFUNCTION,
+        visibility $TRANSITION_TIME linear;
 
     &.isActive {
         opacity: 1;
+        visibility: visible;
         height: $HEIGHT_DROPDOWN;
         transition: height $TRANSITION_TIME $TRANSITION_TIMINGFUNCTION,
             opacity $TRANSITION_TIMINGFUNCTION $TRANSITION_TIME 0.1s;

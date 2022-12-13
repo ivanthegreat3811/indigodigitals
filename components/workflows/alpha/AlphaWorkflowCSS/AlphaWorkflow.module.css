@@ -1,0 +1,74 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 90%;
+  margin-left: 6px;
+}
+@media screen and (max-width: 600px) {
+  .container {
+    margin: auto;
+  }
+}
+
+.pointerWrapper {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+.pointerWrapper .pointerContainer {
+  position: relative;
+}
+.pointerWrapper .pointerContainer .pointer {
+  background-color: #2e7bb0;
+  height: 15px;
+  width: 30px;
+  -webkit-clip-path: polygon(0 30%, 70% 30%, 70% 0, 100% 50%, 70% 100%, 70% 70%, 0 70%);
+          clip-path: polygon(0 30%, 70% 30%, 70% 0, 100% 50%, 70% 100%, 70% 70%, 0 70%);
+  margin: 1.5rem;
+}
+@media screen and (max-width: 1536px) {
+  .pointerWrapper .pointerContainer .pointer {
+    margin: 0.5rem;
+    width: 30px;
+  }
+}
+
+.singleWorkWrapper {
+  background-color: #2e7bb0;
+  overflow: hidden;
+  border-radius: 100%;
+  display: inline-block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.singleWorkWrapper .singleWorkLink {
+  display: flex;
+  align-items: center;
+  margin: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  aspect-ratio: 1/1;
+  padding: 1.6rem;
+}
+@media screen and (max-width: 1536px) {
+  .singleWorkWrapper .singleWorkLink {
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .singleWorkWrapper .singleWorkLink {
+    padding: 0.2rem;
+  }
+}
+.singleWorkWrapper .singleWorkLink .singleWorkSpan {
+  display: block;
+  margin: auto;
+  color: white;
+  text-align: center;
+  width: 6.4rem;
+}/*# sourceMappingURL=AlphaWorkflow.module.css.map */
