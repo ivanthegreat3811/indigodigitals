@@ -23,6 +23,27 @@
 .contact .contactBgWrapper.home {
   transform: translateY(-50%);
 }
+@media screen and (max-width: 1200px) {
+  .contact .contactBgWrapper.home .contactBgContainer {
+    position: relative;
+  }
+  .contact .contactBgWrapper.home .contactBgContainer .contactBgLayer1 {
+    position: absolute;
+    width: 100vw;
+    height: 700px;
+    background: #ffb800;
+    -webkit-clip-path: polygon(0 10%, 35% 0, 100% 10%, 100% 100%, 0 100%);
+            clip-path: polygon(0 10%, 35% 0, 100% 10%, 100% 100%, 0 100%);
+  }
+  .contact .contactBgWrapper.home .contactBgContainer .contactBgLayer2 {
+    position: absolute;
+    width: 100vw;
+    height: 700px;
+    background: linear-gradient(#46d1dc 0%, #2c78ad 42.97%, #063d63 100%);
+    -webkit-clip-path: polygon(0 10%, 35% 0, 100% 15%, 100% 100%, 0 100%);
+            clip-path: polygon(0 10%, 35% 0, 100% 15%, 100% 100%, 0 100%);
+  }
+}
 .contact .contactBgWrapper.notHome .contactBgContainer {
   position: relative;
 }

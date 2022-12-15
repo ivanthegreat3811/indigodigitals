@@ -2,7 +2,7 @@ import defaultStyleSheet from './AlphaWorkflowCSS/AlphaWorkflow.module.css';
 
 export interface IAlphaWorkPointer {}
 
-const AlphaWorkPointer: React.FC<IAlphaWorkPointer> = ({}) => {
+const AlphaWorkPointer: React.FC<IAlphaWorkPointer> = () => {
   return (
     <div className={defaultStyleSheet.pointerWrapper}>
       <div className={defaultStyleSheet.pointerContainer}>

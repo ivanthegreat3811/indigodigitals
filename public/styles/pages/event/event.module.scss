@@ -4,6 +4,12 @@
     width: 100vw;
     height: 100vh;
 
+    .imageBox {
+        position: relative;
+        width: 100vw;
+        height: 90vh;
+    }
+
     .bg1Wrapper {
         $HEIGHT_WRAPPER1: 200px;
         $BOTTOM_WRAPPER1: 20%;

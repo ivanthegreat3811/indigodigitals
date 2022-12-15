@@ -1,4 +1,9 @@
 import type { AppProps } from 'next/app';
+import 'swiper/css'; // for swiper module
+import 'swiper/css/effect-fade';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import '../public/styles/customSwiperBasicCSS/customSwiper.css';
 import '../public/styles/globalSettings/globalSettings.css';
 import './globals.css';
 import { NextPageWithLayout } from './page';

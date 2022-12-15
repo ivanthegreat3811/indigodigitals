@@ -26,6 +26,27 @@
         &.home {
             $BOTTOM_CONTACTWRAPPER: -50%;
             transform: translateY($BOTTOM_CONTACTWRAPPER);
+            @media screen and(max-width: 1200px) {
+                .contactBgContainer {
+                    position: relative;
+                    .contactBgLayer1 {
+                        position: absolute;
+                        width: 100vw;
+                        height: $HEIGHT_CONTACTWRAPPER;
+                        background: var.$COLOR_SUCCESS;
+
+                        clip-path: polygon(0 10%, 35% 0, 100% 10%, 100% 100%, 0 100%);
+                    }
+                    .contactBgLayer2 {
+                        position: absolute;
+                        width: 100vw;
+                        height: $HEIGHT_CONTACTWRAPPER;
+                        background: linear-gradient(#46d1dc 0%, #2c78ad 42.97%, #063d63 100%);
+
+                        clip-path: polygon(0 10%, 35% 0, 100% 15%, 100% 100%, 0 100%);
+                    }
+                }
+            }
         }
 
         &.notHome {

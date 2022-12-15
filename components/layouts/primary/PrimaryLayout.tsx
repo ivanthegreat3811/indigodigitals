@@ -22,12 +22,12 @@ export interface IPrimaryLayout {
 
 const PrimaryLayout: React.FC<IPrimaryLayout> = ({ style, className, children, home }) => {
   useEffect(() => {
-    AOS.init({ duration: 600 });
+    AOS.init({ duration: 300 });
   });
 
   return (
     <div style={style ? style : {}} className={`${defaultStyleSheet.wrapper} ${className ? className : ''}`}>
-      <PrimaryHeader />
+      <PrimaryHeader home={home} />
       <InPageNav />
 
       {children}
@@ -39,10 +39,10 @@ const PrimaryLayout: React.FC<IPrimaryLayout> = ({ style, className, children, h
           </div>
         </div>
         <div className=" sm:ml-16 sm:mr-48 mt-36">
-          <h3 className="SMALLTITLE text-center mb-12" style={{ color: 'white' }} data-aos="fade-up">
+          <h3 className="SMALLTITLE text-center mb-12" style={{ color: 'white' }} data-aos="fade-in">
             打造專屬網站，與新世代接軌，在網路世界插旗！
           </h3>
-          <form className={`${defaultStyleSheet.form} p-12 mx-4 sm:mx-auto`} data-aos="slide-up" data-aos-delay="100" data-aos-easing="ease-out">
+          <form className={`${defaultStyleSheet.form} p-12 mx-4 sm:mx-auto`} data-aos="slide-fade" data-aos-delay="100" data-aos-easing="ease-out">
             <div className="grid grid-cols-1 md:grid-cols-2 mx-auto md:gap-x-7 ">
               <InputTextAlpha isRequired={true} fieldName="聯絡人" className=" " />
               <InputEmailAlpha isRequired={true} fieldName="E-mail" className="" />

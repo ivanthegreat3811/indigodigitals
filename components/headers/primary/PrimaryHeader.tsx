@@ -7,15 +7,16 @@ import defaultStyleSheet from './PrimaryHeaderCSS/PrimaryHeader.module.css';
 export interface IPrimaryHeader {
   style?: CSSProperties;
   className?: string;
+  home?: boolean;
   //sampleTextProp?: string | null;
 }
 
-const PrimaryHeader: React.FC<IPrimaryHeader> = ({ style, className }) => {
+const PrimaryHeader: React.FC<IPrimaryHeader> = ({ style, className, home }) => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   return (
     <div style={style ? style : {}} className={`${defaultStyleSheet.wrapper} ${isMenuOpen && defaultStyleSheet.isActive} ${className ? className : ''}`}>
       <div className={defaultStyleSheet.container}>
-        <TopNav isActive={isMenuOpen} handleLinkClick={() => setIsMenuOpen(false)} />
+        <TopNav isActive={isMenuOpen} handleLinkClick={() => setIsMenuOpen(false)} home={home} />
         <header className={`${defaultStyleSheet.header} ${isMenuOpen && defaultStyleSheet.isActive}`}>
           <BurgerBar className={defaultStyleSheet.burgerBar} isActive={isMenuOpen} handleClick={() => setIsMenuOpen(prev => !prev)} />
           <PrimaryLogo className={`${defaultStyleSheet.logo} ${isMenuOpen && defaultStyleSheet.isActive}`} isActive={isMenuOpen} />

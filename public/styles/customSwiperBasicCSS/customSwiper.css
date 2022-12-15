@@ -1,0 +1,84 @@
+.swiper {
+  overflow: initial;
+}
+
+.swiper-slide {
+  z-index: 0;
+}
+
+.swiper-pagination.swiper-pagination-clickable {
+  display: inline-block;
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: left;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: visible;
+}
+
+.swiper-pagination-bullet {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: opacity 0.4s linear;
+}
+.swiper-pagination-bullet p {
+  display: inline-block;
+  color: white;
+  font-size: 0.8rem;
+  margin: 0px 8px;
+}
+.swiper-pagination-bullet span {
+  display: inline-block;
+  vertical-align: middle;
+  height: 1px;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 0.4s linear;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-dark p {
+  color: black;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-dark span {
+  background-color: black;
+}
+
+.swiper-pagination-bullet-active p {
+  color: white;
+}
+.swiper-pagination-bullet-active span {
+  width: 60px;
+  background-color: white;
+}
+.swiper-pagination-bullet-active.swiper-pagination-bullet-dark p {
+  color: black;
+}
+.swiper-pagination-bullet-active.swiper-pagination-bullet-dark span {
+  background-color: black;
+}
+
+.custom-swiper-button {
+  z-index: 12;
+}
+.custom-swiper-button::after {
+  content: none;
+}
+
+.custom-swiper-button-middle-container {
+  position: absolute;
+  left: 50%;
+  top: auto;
+  bottom: 0px;
+  transform: translateX(-50%);
+  z-index: 12;
+}
+.custom-swiper-button-middle-container .custom-swiper-button-middle {
+  position: relative;
+}/*# sourceMappingURL=customSwiper.css.map */

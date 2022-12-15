@@ -3,6 +3,7 @@ import 'aos/dist/aos.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect } from 'react';
+import SwiperCarousel from '../components/carousels/swiper@8.4.5/SwiperCarousel';
 import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
 import styleSheet from '../public/styles/pages/home/home.module.css';
 import { NextPageWithLayout } from './page';
@@ -20,13 +21,24 @@ const Home: NextPageWithLayout = () => {
 
   return (
     <>
-      <div id={styleSheet.keyVision} style={{ width: '100vw', height: '100vh', backgroundColor: 'whitesmoke' }}></div>
+      <div id={styleSheet.keyVision}>
+        <SwiperCarousel
+          buttonPosition={{ position: 'middle', spaceBetweenPagination: 20 }}
+          slides={[
+            { imageUrl: '/images/indigodigitals/website_brandOfficial.jpg' },
+            { imageUrl: '/images/indigodigitals/website_ecommerce.jpg' },
+            { imageUrl: '/images/indigodigitals/website_event.jpg' },
+            { imageUrl: '/images/indigodigitals/website_onePage.jpg' },
+            { imageUrl: '/images/indigodigitals/registrar.jpg' },
+          ]}
+        />
+      </div>
       <main>
         <section id="about" className={styleSheet.section1}>
           <h2 className="text-center LARGETITLE text-secondary my-16">關於靛青</h2>
           <div className={`${styleSheet.section1_contentBox} flex flex-row-reverse`}>
             <div className={`${styleSheet.section1_imageBox} relative `} data-aos="fade-up">
-              <Image src="/images/greatMen/TheGhost1.jpeg" alt="" fill style={{ objectFit: 'cover', objectPosition: 'center' }} />
+              <Image src="/images/indigodigitals/webDesign/about.png" alt="" fill style={{ objectFit: 'cover', objectPosition: 'center' }} />
             </div>
             <div className={`${styleSheet.section1_paragraphContainer} `}>
               <p className={`${styleSheet.section1_paragraph}  CONTENT`} data-aos="slide-right" data-aos-delay="50">
@@ -50,19 +62,31 @@ const Home: NextPageWithLayout = () => {
             </div>
           </div>
           <h2 className="LARGETITLE text-center  text-success py-7 lg:py-11">服務項目</h2>
-          <div className="border-b-4 border-b-success mx-4 md:ml-16 sm:mr-64" data-aos="slide-up">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mt-8 lg:mt-28">
-              <div className="h-64 bg-gray-light flex items-center justify-center">
-                <h3 className="text-center text-success">網站設計製作</h3>
+          <div className="border-b-4 border-b-success mx-4 md:ml-16 sm:mr-48 md:mr-52" data-aos="slide-up">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mt-8 lg:mt-28 w-fit mx-auto">
+              <div>
+                {/* <h3 className="text-center text-success">網站設計製作</h3> */}
+                <div className={`${styleSheet.smallCard}`}>
+                  <Image src="/images/cards/網站設計製作.png" alt="" fill />
+                </div>
               </div>
-              <div className="h-64 bg-gray-light flex items-center justify-center">
-                <h3 className="text-center text-success">網域註冊及購買</h3>
+              <div>
+                {/* <h3 className="text-center text-success">網域註冊及購買</h3> */}
+                <div className={`${styleSheet.smallCard}`}>
+                  <Image src="/images/cards/網域註冊及購買.png" alt="" fill />
+                </div>
               </div>
-              <div className="h-64 bg-gray-light flex items-center justify-center">
-                <h3 className="text-center text-success">網站信箱設置</h3>
+              <div>
+                {/* <h3 className="text-center text-success">網站信箱設置</h3> */}
+                <div className={`${styleSheet.smallCard}`}>
+                  <Image src="/images/cards/網站信箱設置.png" alt="" fill />
+                </div>
               </div>
-              <div className="h-64 bg-gray-light flex items-center justify-center">
-                <h3 className="text-center text-success">雲端主機租用</h3>
+              <div>
+                {/* <h3 className="text-center text-success">雲端主機租用</h3> */}
+                <div className={`${styleSheet.smallCard}`}>
+                  <Image src="/images/cards/雲端主機租用.png" alt="" fill />
+                </div>
               </div>
             </div>
             <Link href="#" className="text-secondary block my-8">
@@ -78,11 +102,11 @@ const Home: NextPageWithLayout = () => {
               <div id={styleSheet.bg3Layer2}></div>
             </div>
           </div>
-          <div className=" sm:ml-16 sm:mr-64 mx-4">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div id="#gallery" className="md:ml-16 sm:mr-48 md:mr-52">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mx-4">
               <div data-aos="fade-up" data-aos-delay="100">
                 <h3 className="text-center SUBTITLE mt-16 mb-4 text-secondary">活動網站</h3>
-                <Link href="/event">
+                <Link href="/webdesign/event">
                   <div className={`${styleSheet.section3_card}`}>
                     <div className={`${styleSheet.section3_imageBox}`}>
                       <img src="/images/vertical/活動網站.jpg" alt="" style={{ objectFit: 'cover', objectPosition: 'center' }} />
@@ -107,71 +131,77 @@ const Home: NextPageWithLayout = () => {
 
               <div data-aos="fade-up" data-aos-delay="200">
                 <h3 className="text-center SUBTITLE mt-16 mb-4 text-secondary">一頁式網站</h3>
-                <div className={`${styleSheet.section3_card}`}>
-                  <div className={`${styleSheet.section3_imageBox}`}>
-                    <img src="/images/vertical/一頁式網站.jpg" alt="" style={{ objectFit: 'cover', objectPosition: 'center' }} />
-                  </div>
-                  <div className={styleSheet.maskWrapper}>
-                    <div className={styleSheet.maskContainer}>
-                      <article className={styleSheet.maskContent}>
-                        <h3 className={`${styleSheet.maskTitle} SUBTITLE`}>一頁式網站</h3>
-                        <p className={`${styleSheet.maskText} CONTENT`}>
-                          最了解你的設計團隊，
-                          <br /> 做出高互動性的網站。
-                          <br /> 用科技結合設計，
-                          <br /> 讓你與眾不同。
-                        </p>
-                      </article>
-                      <span role="button" className={`${styleSheet.arrowRight}  ${styleSheet.maskArrow}`}></span>
+                <Link href="/webdesign/onepage">
+                  <div className={`${styleSheet.section3_card}`}>
+                    <div className={`${styleSheet.section3_imageBox}`}>
+                      <img src="/images/vertical/一頁式網站.jpg" alt="" style={{ objectFit: 'cover', objectPosition: 'center' }} />
+                    </div>
+                    <div className={styleSheet.maskWrapper}>
+                      <div className={styleSheet.maskContainer}>
+                        <article className={styleSheet.maskContent}>
+                          <h3 className={`${styleSheet.maskTitle} SUBTITLE`}>一頁式網站</h3>
+                          <p className={`${styleSheet.maskText} CONTENT`}>
+                            最了解你的設計團隊，
+                            <br /> 做出高互動性的網站。
+                            <br /> 用科技結合設計，
+                            <br /> 讓你與眾不同。
+                          </p>
+                        </article>
+                        <span role="button" className={`${styleSheet.arrowRight}  ${styleSheet.maskArrow}`}></span>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </div>
 
               <div data-aos="fade-up" data-aos-delay="300">
                 <h3 className="text-center SUBTITLE mt-16 mb-4 text-secondary">形象官網</h3>
-                <div className={`${styleSheet.section3_card}`}>
-                  <div className={`${styleSheet.section3_imageBox}`}>
-                    <img src="/images/vertical/形象官網.jpg" alt="" style={{ objectFit: 'cover', objectPosition: 'center' }} />
-                  </div>
-                  <div className={styleSheet.maskWrapper}>
-                    <div className={styleSheet.maskContainer}>
-                      <article className={styleSheet.maskContent}>
-                        <h3 className={`${styleSheet.maskTitle} SUBTITLE`}>形象官網</h3>
-                        <p className={`${styleSheet.maskText} CONTENT`}>
-                          最了解你的設計團隊，
-                          <br /> 做出高互動性的網站。
-                          <br /> 用科技結合設計，
-                          <br /> 讓你與眾不同。
-                        </p>
-                      </article>
-                      <span role="button" className={`${styleSheet.arrowRight}  ${styleSheet.maskArrow}`}></span>
+                <Link href="/webdesign/brandofficial">
+                  <div className={`${styleSheet.section3_card}`}>
+                    <div className={`${styleSheet.section3_imageBox}`}>
+                      <img src="/images/vertical/形象官網.jpg" alt="" style={{ objectFit: 'cover', objectPosition: 'center' }} />
+                    </div>
+                    <div className={styleSheet.maskWrapper}>
+                      <div className={styleSheet.maskContainer}>
+                        <article className={styleSheet.maskContent}>
+                          <h3 className={`${styleSheet.maskTitle} SUBTITLE`}>形象官網</h3>
+                          <p className={`${styleSheet.maskText} CONTENT`}>
+                            最了解你的設計團隊，
+                            <br /> 做出高互動性的網站。
+                            <br /> 用科技結合設計，
+                            <br /> 讓你與眾不同。
+                          </p>
+                        </article>
+                        <span role="button" className={`${styleSheet.arrowRight}  ${styleSheet.maskArrow}`}></span>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </div>
 
               <div data-aos="fade-up" data-aos-delay="400">
                 <h3 className="text-center SUBTITLE mt-16 mb-4 text-secondary">電商網站</h3>
-                <div className={`${styleSheet.section3_card}`}>
-                  <div className={`${styleSheet.section3_imageBox}`}>
-                    <img src="/images/vertical/電商網站.jpg" alt="" style={{ objectFit: 'cover', objectPosition: 'center' }} />
-                  </div>
-                  <div className={styleSheet.maskWrapper}>
-                    <div className={styleSheet.maskContainer}>
-                      <article className={styleSheet.maskContent}>
-                        <h3 className={`${styleSheet.maskTitle} SUBTITLE`}>電商網站</h3>
-                        <p className={`${styleSheet.maskText} CONTENT`}>
-                          最了解你的設計團隊，
-                          <br /> 做出高互動性的網站。
-                          <br /> 用科技結合設計，
-                          <br /> 讓你與眾不同。
-                        </p>
-                      </article>
-                      <span role="button" className={`${styleSheet.arrowRight}  ${styleSheet.maskArrow}`}></span>
+                <Link href="/webdesign/ecommerce">
+                  <div className={`${styleSheet.section3_card}`}>
+                    <div className={`${styleSheet.section3_imageBox}`}>
+                      <img src="/images/vertical/電商網站.jpg" alt="" style={{ objectFit: 'cover', objectPosition: 'center' }} />
+                    </div>
+                    <div className={styleSheet.maskWrapper}>
+                      <div className={styleSheet.maskContainer}>
+                        <article className={styleSheet.maskContent}>
+                          <h3 className={`${styleSheet.maskTitle} SUBTITLE`}>電商網站</h3>
+                          <p className={`${styleSheet.maskText} CONTENT`}>
+                            最了解你的設計團隊，
+                            <br /> 做出高互動性的網站。
+                            <br /> 用科技結合設計，
+                            <br /> 讓你與眾不同。
+                          </p>
+                        </article>
+                        <span role="button" className={`${styleSheet.arrowRight}  ${styleSheet.maskArrow}`}></span>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
           </div>
